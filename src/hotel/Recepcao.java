@@ -10,7 +10,7 @@ public class Recepcao {
 		estadias = new ArrayList<Estadia>();
 	}
 
-	public void checkIn(String nome, String tipo, int idade, int dias, double valor) {
+	public void checkIn(String nome, String tipo, int idade, int dias, double valor) throws Exception {
 		Estadia estadia = new Estadia(nome, tipo, idade, dias, valor);
 		estadias.add(estadia);
 	}

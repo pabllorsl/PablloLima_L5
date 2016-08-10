@@ -8,7 +8,7 @@ public class Hotel {
 		recepcao = new Recepcao();
 	}
 
-	public void checkIn(String nome, String tipo, int idade, int dias, double valor) {
+	public void checkIn(String nome, String tipo, int idade, int dias, double valor) throws Exception {
 		recepcao.checkIn(nome, tipo, idade, dias, valor);
 	}
 

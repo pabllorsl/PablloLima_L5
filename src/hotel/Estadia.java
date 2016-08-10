@@ -6,7 +6,8 @@ public class Estadia {
 	private double valor;
 	private int dias;
 
-	public Estadia(String nome, String tipo, int idade, int dias, double valor) {
+	public Estadia(String nome, String tipo, int idade, int dias, double valor) throws Exception {
+		animal = new Animal(nome, tipo, idade);
 		this.valor = valor;
 		this.dias = dias;
 	}

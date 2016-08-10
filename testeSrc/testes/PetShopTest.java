@@ -89,7 +89,7 @@ public class PetShopTest {
 			
 			assertEquals(1, recepcao.getNumDeHospedes());
 			
-			assertEquals("Estadias:\nPaola Bracho (Cobra): 1 dias com o preco de R$ 10.00",
+			assertEquals("Estadias:\nPaola Bracho (Cobra): 1 dia(s) com o preco de R$ 10.00",
 					recepcao.toString());
 		}catch(Exception e){
 			fail(); //Nao deve lancar excecao
