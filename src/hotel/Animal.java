@@ -6,10 +6,24 @@ public class Animal {
 	private String tipo;
 	private int idade;
 
-	public Animal(String nome, String tipo, int idade) {
+	public Animal(String nome, String tipo, int idade) throws Exception {
+
+		if (nome == null || nome.trim().isEmpty()) {
+			throw new Exception("Nome de um animal nao pode ser nulo ou vazio");
+		}
+
+		if (tipo == null || tipo.trim().isEmpty()) {
+			throw new Exception("Tipo de um animal nao pode ser nulo ou vazio");
+		}
+
+		if (idade < 0) {
+			throw new Exception("Idade de um animal nao pode ser abaixo de 0");
+		}
+
 		this.nome = nome;
 		this.tipo = tipo;
 		this.idade = idade;
+		
 	}
 
 	public String getNome() {
@@ -47,6 +61,7 @@ public class Animal {
 
 	@Override
 	public boolean equals(Object objeto) {
+
 		if (!(objeto instanceof Animal)) {
 			return false;
 		}
