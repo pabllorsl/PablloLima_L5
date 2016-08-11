@@ -23,7 +23,7 @@ public class Animal {
 		this.nome = nome;
 		this.tipo = tipo;
 		this.idade = idade;
-
+		
 	}
 
 	public String getNome() {

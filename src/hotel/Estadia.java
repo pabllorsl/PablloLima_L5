@@ -1,7 +1,5 @@
 package hotel;
 
-import java.util.Locale;
-
 public class Estadia {
 
 	private Animal animal;
@@ -44,8 +42,8 @@ public class Estadia {
 
 	@Override
 	public String toString() {
-		return String.format(Locale.US, "%s (%s): %d dia(s) com o preco de R$ %.2f", this.getNome(), this.getTipo(),
-				this.getDias(), this.getValor());
+		return String.format("%s, %s, %d dia(s) com o preco de R$ %.2f", this.getNome(), this.getTipo(), this.getDias(),
+				this.getValor());
 	}
 
 }
