@@ -16,10 +16,12 @@ public class Recepcao {
 	}
 
 	public void checkOut(String nome) {
-		for (Estadia estadia : estadias) {
-			if (estadia.getNome().equalsIgnoreCase(nome)) {
-				estadias.remove(estadia);
+		int i = 0;
+		while (estadias.size() > i) {
+			if (estadias.get(i).getNome().equalsIgnoreCase(nome)) {
+				estadias.remove(estadias.get(i));
 			}
+			i = i + 1;
 		}
 	}
 
@@ -40,8 +42,7 @@ public class Recepcao {
 		String representacao = "Estadias:";
 		for (Estadia estadia : estadias) {
 			if (estadias.size() > 0) {
-				representacao = representacao + String.format("\n%s (%s): %d dia(s) com o preco de R$ %.2f",
-						estadia.getNome(), estadia.getTipo(), estadia.getDias(), estadia.getValor());
+				representacao = representacao + "\n" + estadia.toString();
 			}
 		}
 		return representacao;
